@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion Racolage - BSF Orly</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --police-red: #e30613;
+            --overlay: rgba(0, 0, 0, 0.7);
+        }
+
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #1a1a1a; 
+            color: white; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .container { max-width: 1000px; margin: 40px auto; text-align: center; padding: 0 20px; }
+
+        .back-link { 
+            display: inline-block; 
+            margin-bottom: 20px; 
+            color: var(--police-red); 
+            text-decoration: none; 
+            font-weight: bold; 
+            text-transform: uppercase;
+        }
+        
+        .back-link:hover { color: white; }
+
+        h2 { 
+            border-bottom: 2px solid var(--police-red); 
+            display: inline-block; 
+            padding-bottom: 10px; 
+            margin-bottom: 40px; 
+            text-transform: uppercase;
+        }
+
+        .gest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .gest-bubble {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 3px solid var(--police-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            padding: 25px;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gest-bubble::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--overlay);
+            z-index: 1;
+            transition: background 0.3s ease;
+        }
+
+        .gest-bubble span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .gest-bubble:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--police-red);
+        }
+
+        .gest-bubble:hover::before {
+            background: rgba(227, 6, 19, 0.4); 
+        }
+
+        /* --- IMAGES DE FOND --- */
+        .img-statistiques { background-image: url('images/stats-graph.jpg'); }
+        .img-tableau     { background-image: url('images/tableau-bord.jpg'); }
+        .img-fichiers    { background-image: url('images/base-donnees.jpg'); }
+        .img-planning    { background-image: url('images/planning-ope.jpg'); }
+        .img-recap       { background-image: url('images/recapitulatif.jpg'); }
+        .img-archive     { background-image: url('images/dossier-archive.jpg'); }
+
+        @media (max-width: 850px) { .gest-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 550px) { 
+            .gest-grid { grid-template-columns: 1fr; }
+            .gest-bubble { width: 200px; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="Procédures_types.html" class="back-link">← Retour Gestion Procédures</a>
+        <br>
+        <h2>Gestion & Suivi : Racolage</h2>
+
+        <div class="gest-grid">
+            <a href="pdf/statistiques_mensuelles_racolage.pdf" target="_blank" class="gest-bubble img-statistiques">
+                <span>1. Statistiques Mensuelles</span>
+            </a>
+
+            <a href="pdf/tableau_bord_unite.pdf" target="_blank" class="gest-bubble img-tableau">
+                <span>2. Tableau de Bord Unitaire</span>
+            </a>
+
+            <a href="pdf/fichier_recidivistes.pdf" target="_blank" class="gest-bubble img-fichiers">
+                <span>3. Suivi des Récidivistes</span>
+            </a>
+
+            <a href="pdf/planning_missions_racolage.pdf" target="_blank" class="gest-bubble img-planning">
+                <span>4. Planning des Missions</span>
+            </a>
+
+            <a href="pdf/recapitulatif_saisies.pdf" target="_blank" class="gest-bubble img-recap">
+                <span>5. Récapitulatif des Saisies</span>
+            </a>
+
+            <a href="pdf/archives_gestion_racolage.pdf" target="_blank" class="gest-bubble img-archive">
+                <span>6. Archivage Annuel</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

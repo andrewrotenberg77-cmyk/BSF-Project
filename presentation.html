@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BSF Orly - Présentation du Service</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        /* --- BARRE DE NAVIGATION (FIXE) --- */
+        nav { 
+            background: #000; 
+            padding: 15px; 
+            text-align: center; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid #333; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.9em; 
+        }
+        nav a.active { 
+            color: #3498db; 
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* --- BANNIÈRE IMAGE --- */
+        .header-section {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url("Média/Présentation/Reacteur.webp");
+            background-size: cover;
+            background-position: center 20%;
+            min-height: 300px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-end; 
+            padding: 40px 20px; 
+            margin-top: 50px; /* Espace pour le nav fixe */
+            text-align: center;
+            color: white;
+            box-shadow: inset 0 -100px 100px rgba(0,0,0,0.5);
+        }
+
+        .header-section h1 {
+            margin: 0; 
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            font-size: 2.8em; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* --- BLOCS DE MISSIONS --- */
+        .mission-box {
+            background: white;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+            border-left: 6px solid #2980b9;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .mission-box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .mission-box ul {
+            padding-left: 20px;
+            list-style-type: none;
+        }
+
+        .mission-box ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .mission-box ul li::before {
+            content: "▹";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: -20px;
+        }
+
+        /* --- TEXTE & CITATION --- */
+        p {
+            font-size: 1.05em;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .quote {
+            font-style: italic;
+            color: #7f8c8d;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        strong {
+            color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .header-section { min-height: 200px; }
+            .header-section h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html" class="active">Présentation</a>
+        <a href="formation.html">Formation</a>
+        <a href="equipement.html">Équipement</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="statistiques.html">Statistiques</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-section">
+        <h1>Présentation & Missions</h1>
+    </div>
+
+    <div class="container">
+        <p>Rattachée à la <strong>PAF ORLY (Police Aux Frontières d'Orly)</strong>, la <strong>Brigade Soutien Frontière (BSF)</strong> est une unité spécialisée dont le rôle est crucial pour la sécurité nationale au sein de l'un des plus grands hubs aéroportuaires d'Europe.</p>
+
+        <div class="mission-box">
+            <h3>Organisation de l'unité</h3>
+            <p>Sous l'autorité d'un Major, Chef d’Unité, la BSF s'appuie sur deux piliers opérationnels :</p>
+            <ul>
+                <li><strong>Section Alpha (A)</strong></li>
+                <li><strong>Section Bravo (B)</strong></li>
+            </ul>
+            <p>Chaque section est composée de 16 opérateurs dont 2 encadrants figurant en tête de chaque section.</p>
+        </div>
+
+        <div class="mission-box">
+            <h3>Nos Missions Régaliennes</h3>
+            <p>La BSF assure la protection du secteur aéroportuaire à travers trois axes majeurs :</p>
+            <ul>
+                <li><strong>Lutte Antiterroriste :</strong> Surveillance accrue et intervention immédiate en cas de menace caractérisée.</li>
+                <li><strong>Soutien Opérationnel :</strong> Appui tactique aux autres services de police lors d'opérations à haut risque.</li>
+                <li><strong>Sécurisation :</strong> Protection des points d'accès restreints et des zones critiques.</li>
+            </ul>
+        </div>
+
+        <p>La BSF évolue dans des environnements dits « hostiles », où la menace est protéiforme. Sa signature opérationnelle repose sur deux spécialités majeures :</p>
+        
+        <div style="background: #eef2f3; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+            <ul style="margin: 0; padding-left: 20px;">
+                <li><strong>Lutte Anti-Terroriste :</strong> Capacité de projection rapide pour fixer ou neutraliser toute menace au cœur du flux aéroportuaire.</li>
+                <li style="margin-top: 10px;"><strong>Intervention NRBC de Niv 2 :</strong> Expertise permettant d'opérer en milieu contaminé (Nucléaire, Radiologique, Biologique, Chimique).</li>
+            </ul>
+        </div>
+
+        <p>La BSF d'Orly assure une présence opérationnelle de <strong>5h à 24h</strong>, garantissant une capacité de projection immédiate sur l'ensemble de la plateforme (pistes, terminaux, zones de fret).</p>
+
+        <p class="quote">"Honneur, Patrie, Vigilance : La Brigade Soutien Frontière au service de la protection des citoyens et de l'intégrité du territoire."</p>
+    </div> 
+
+    <div style="text-align: center; color: #7f8c8d; font-size: 9pt; padding-bottom: 20px;">
+        &copy; 2026 BSF Orly - Portail d'Apprentissage.
+    </div>
+
+</body>
+</html>

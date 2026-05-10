@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails NRBCe - BSF Orly</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+            color: white;
+            padding: 40pt 20pt;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24pt;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .header p {
+            margin-top: 10pt;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        /* --- CONTENEUR --- */
+        .container {
+            padding: 30pt;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* --- BOUTON RETOUR --- */
+        .back-nav {
+            margin-bottom: 30px;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 10pt;
+            transition: all 0.3s ease;
+            background: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn-back:hover {
+            color: #3498db;
+            transform: translateX(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .btn-back svg {
+            margin-right: 8px;
+        }
+
+        /* --- GRILLE DE SÉLECTION --- */
+        .nrbce-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* --- STYLE DES BOUTONS (Identique aux procédures) --- */
+        .nrbce-button {
+            background: white;
+            border-left: 6px solid #e67e22; /* Couleur orange/alerte pour le NRBCe */
+            border-top: 1px solid #eee;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 12pt;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .nrbce-button span {
+            flex-grow: 1;
+        }
+
+        .nrbce-button::after {
+            content: '→';
+            font-size: 14pt;
+            color: #e67e22;
+            transition: transform 0.2s ease;
+        }
+
+        .nrbce-button:hover {
+            background-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left-color: #d35400;
+        }
+
+        .nrbce-button:hover::after {
+            transform: translateX(5px);
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            text-align: center;
+            padding: 40pt 20pt 20pt;
+            font-size: 10pt;
+            color: #7f8c8d;
+        }
+
+        /* Responsive 2 colonnes */
+        @media (min-width: 600px) {
+            .nrbce-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Spécialisation NRBCe</h1>
+        <p>Accédez aux supports de cours et procédures d'intervention.</p>
+    </div>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="formation.html" class="btn-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Retour Formation
+            </a>
+        </div>
+
+        <div class="nrbce-grid">
+            <a href="https://docs.google.com/presentation/d/1WlgWXyGP4jcxPcFOz2csjAhx9HTlTXI13W8nycso1PA/edit?usp=sharing" target="_blank" class="nrbce-button">
+                <span>1. Schéma Tactique</span>
+            </a>
+
+            <a href="Procédures\N.R.B.C.e\Signes_Olfactifs.pdf" class="nrbce-button">
+                <span>2. Signes Olfactifs</span>
+            </a>
+
+            <a href="Procédures\N.R.B.C.e\Les_modes_d'actions.pdf" class="nrbce-button">
+                <span>3. Les modes d'Actions</span>
+            </a>
+
+            <a href="Procédures\N.R.B.C.e\Les_Risques.pdf" class="nrbce-button">
+                <span>4. Les Risques</span>
+            </a>
+
+            <a href="Procédures\N.R.B.C.e\Réponses_Opérationnelles.pdf" class="nrbce-button">
+                <span>5. Réponses Opérationnelles</span>
+            </a>
+
+            <a href="nrbce-videos.html" class="nrbce-button">
+                <span>6. Vidéos de démonstration</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 BSF Orly - Excellence & Engagement.
+    </div>
+
+</body>
+</html>

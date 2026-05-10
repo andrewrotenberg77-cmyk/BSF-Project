@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact & Dossier - BSF Orly</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        /* --- BARRE DE NAVIGATION (FIXE) --- */
+        nav { 
+            background: #000; 
+            padding: 15px; 
+            text-align: center; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid #333; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.9em; 
+        }
+        nav a.active { 
+            color: #3498db; 
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* --- HEADER HARMONISÉ --- */
+        .header {
+            background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+            color: white;
+            padding: 60pt 20pt 40pt 20pt; 
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24pt;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .container {
+            padding: 30pt;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* --- SECTION FORMULAIRE CONTACT --- */
+        .contact-container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            border-left: 6px solid #3498db; 
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .contact-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 10pt;
+            color: #2c3e50;
+        }
+
+        .contact-container input, .contact-container textarea { 
+            width: 100%; padding: 12px; margin-bottom: 15px; background: #f9f9f9; 
+            border: 1px solid #ddd; color: #333; border-radius: 4pt; box-sizing: border-box; 
+            font-family: inherit;
+        }
+
+        .btn-send { 
+            background: #3498db; color: white; border: none; padding: 12px; 
+            width: 100%; font-weight: bold; text-transform: uppercase; cursor: pointer; 
+            border-radius: 4pt; transition: background 0.3s;
+        }
+        .btn-send:hover { background: #2980b9; }
+
+        /* --- FICHE DE RENSEIGNEMENT --- */
+        .fiche-section {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        .fiche-header {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        .fiche-section h3 { 
+            color: #2980b9; 
+            text-transform: uppercase; 
+            font-size: 11pt;
+            border-left: 4px solid #2980b9; 
+            padding-left: 10px; 
+            margin: 25px 0 15px 0; 
+        }
+
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .full-row { grid-column: span 2; }
+
+        .fiche-section input {
+            width: 100%; padding: 10px; background: #fff; border: 1px solid #eee;
+            border-bottom: 1px solid #ccc; color: #333; font-size: 10pt; box-sizing: border-box;
+        }
+
+        .signature-area {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            font-size: 10pt;
+        }
+
+        .sig-box {
+            border: 2px dashed #ccc;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9pt;
+            color: #999;
+            margin-top: 10px;
+        }
+
+        .print-zone { text-align: center; margin: 30px 0; }
+        .btn-print {
+            background: #2c3e50; color: #fff; border: none; padding: 12px 25px;
+            font-weight: bold; cursor: pointer; text-transform: uppercase;
+            border-radius: 20px; transition: 0.3s;
+        }
+        .btn-print:hover { background: #34495e; transform: scale(1.05); }
+
+        /* --- CONFIGURATION IMPRESSION --- */
+        @media print {
+            @page { size: A4; margin: 10mm; }
+            nav, .header, .contact-container, .print-zone, hr { display: none !important; }
+            body { background: white; }
+            .container { padding: 0; max-width: 100%; }
+            .fiche-section { border: none !important; padding: 0 !important; }
+            .fiche-section input { border: none !important; border-bottom: 1px solid #000 !important; }
+            .sig-box { border: 1px solid #000 !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="formation.html">Formation</a>
+        <a href="equipement.html">Équipement</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="statistiques.html">Statistiques</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <div class="header">
+        <h1>Contact & Recrutement</h1>
+        <p>BSF Orly - Gestion des effectifs et messagerie</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="contact-container">
+            <h2 style="margin-top:0; font-size: 14pt; color: #2c3e50; text-transform: uppercase;">Envoyer un message</h2>
+            <form action="https://formspree.io/f/xnjlvyzo" method="POST" target="_blank">
+                <label>Nom & Prénom</label>
+                <input type="text" name="name" required placeholder="Ex: Gpx MARTIN Jean">
+                
+                <label>Email</label>
+                <input type="email" name="email" required placeholder="adresse@interieur.gouv.fr">
+                
+                <label>Message</label>
+                <textarea name="message" rows="4" required placeholder="Votre demande..."></textarea>
+                
+                <button type="submit" class="btn-send">Envoyer la demande</button>
+            </form>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;">
+
+        <div class="fiche-section">
+            <div class="fiche-header">
+                <h1 style="margin:0; font-size: 1.4em; color: #2c3e50;">FICHE DE RENSEIGNEMENTS : EFFECTIF POLICE</h1>
+                <p style="margin: 5px 0; font-size: 0.9em; font-weight: bold; color: #7f8c8d;">BRIGADE SOUTIEN FRONTIÈRE - ORLY</p>
+            </div>
+
+            <h3>🛡️ Identité Administrative</h3>
+            <div class="form-grid">
+                <input type="text" placeholder="Grade actuel" class="full-row">
+                <input type="text" placeholder="Nom de famille">
+                <input type="text" placeholder="Prénom">
+                <input type="text" placeholder="Matricule">
+                <input type="text" placeholder="N° R.I.O">
+                <input type="text" placeholder="Date entrée Administration">
+                <input type="text" placeholder="Date titularisation">
+            </div>
+
+            <h3>👤 État Civil & Coordonnées</h3>
+            <div class="form-grid">
+                <input type="text" placeholder="Date de naissance">
+                <input type="text" placeholder="Lieu de naissance">
+                <input type="text" placeholder="Adresse complète" class="full-row">
+                <input type="text" placeholder="Téléphone mobile">
+                <input type="email" placeholder="E-mail @interieur.gouv.fr">
+            </div>
+
+            <h3>🆘 Contact Urgence</h3>
+            <div class="form-grid">
+                <input type="text" placeholder="Nom & Prénom personne de confiance">
+                <input type="text" placeholder="Lien de parenté">
+                <input type="text" placeholder="Téléphone d'urgence" class="full-row">
+            </div>
+
+            <div class="signature-area">
+                <div>
+                    <p>Fait à Orly, le : ____/____/20__</p>
+                    <p style="font-size: 0.8em; color: #7f8c8d;">(Mise à jour annuelle obligatoire)</p>
+                </div>
+                <div>
+                    <p style="margin:0; text-align: center;">Signature de l'agent</p>
+                    <div class="sig-box">CADRE SIGNATURE</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="print-zone">
+            <button class="btn-print" onclick="window.print()">🖨️ Générer la fiche PDF / Imprimer</button>
+        </div>
+    </div>
+
+    <div style="text-align: center; color: #7f8c8d; font-size: 9pt; padding-bottom: 20px;">
+        &copy; 2026 BSF Orly - Portail d'Apprentissage.
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Médiathèque NRBCe - BSF Orly</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background: linear-gradient(135deg, #d63031 0%, #2c3e50 100%);
+            color: white;
+            padding: 40pt 20pt;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 22pt;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .header p {
+            margin-top: 10pt;
+            opacity: 0.9;
+        }
+
+        /* --- CONTENEUR --- */
+        .container {
+            padding: 30pt;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* --- BOUTON RETOUR --- */
+        .back-nav {
+            margin-bottom: 30px;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 10pt;
+            transition: all 0.3s ease;
+            background: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn-back:hover {
+            color: #d63031;
+            transform: translateX(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .btn-back svg {
+            margin-right: 8px;
+        }
+
+        /* --- GRILLE DES VIDÉOS --- */
+        .video-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        /* --- STYLE DES BOUTONS --- */
+        .video-button {
+            background: white;
+            border-left: 6px solid #d63031; /* Rouge pour l'aspect RETEX/Urgence */
+            border-top: 1px solid #eee;
+            border-right: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            padding: 18px 25px;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 11pt;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .video-button span {
+            flex-grow: 1;
+        }
+
+        /* Icône de lecture (Play) à la place du chevron pour varier */
+        .video-button::before {
+            content: '▶';
+            margin-right: 15px;
+            color: #d63031;
+            font-size: 10pt;
+        }
+
+        .video-button:hover {
+            background-color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left-color: #b71c1c;
+        }
+
+        /* Responsive 2 colonnes */
+        @media (min-width: 768px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40pt 20pt 20pt;
+            font-size: 10pt;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Médiathèque NRBCe</h1>
+        <p>Retours d'Expérience (RETEX) et Analyses Vidéo</p>
+    </div>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="formation-nrbce.html" class="btn-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Retour Spécialisation
+            </a>
+        </div>
+
+        <div class="video-grid">
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\prise en charge victime MSF.mp4" target="_blank" class="video-button">
+                <span>1. Prise en Charge Victimes (MSF)</span>
+            </a>
+
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\VIDEO 1 Policeman Killed Instantly By An Ammonia Gas Tank.mp4" target="_blank" class="video-button">
+                <span>2. Accident Ammoniac (U.S.A)</span>
+            </a>
+
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\explosion beyrouth.mp4" target="_blank" class="video-button">
+                <span>3. Explosion Beyrouth</span>
+            </a>
+
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\Allemagne.mp4" target="_blank" class="video-button">
+                <span>4. Interpellation Menace Biologique (All)</span>
+            </a>
+
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\Une fuite de chlore cause la mort de 13 personnes dans le port jordanien d'Aqaba.mp4" target="_blank" class="video-button">
+                <span>5. Fuite de Chlore (Jordanie)</span>
+            </a>
+
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\VIDEO 2 bologne 1.mp4" target="_blank" class="video-button">
+                <span>6. Accident Transport (Italie)</span>
+            </a>
+
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\fuite de gaz inde 2020.mp4" target="_blank" class="video-button">
+                <span>7. Fuite de Gaz Toxique (Indes)</span>
+            </a>
+
+            <a href="Média\Formation\N.R.B.C.e\Vidéos\fuite camion incendie.mp4" target="_blank" class="video-button">
+                <span>8. Incident Camion Citerne (Indes)</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 BSF Orly - Documentation Pédagogique.
+    </div>
+
+</body>
+</html>

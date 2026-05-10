@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails Intervention Racolage - BSF Orly</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --police-red: #e30613;
+            --overlay: rgba(0, 0, 0, 0.7);
+        }
+
+        body { 
+            font-family: Arial, sans-serif; 
+            background-color: #1a1a1a; 
+            color: white; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .container { max-width: 1000px; margin: 40px auto; text-align: center; padding: 0 20px; }
+
+        .back-link { 
+            display: inline-block; 
+            margin-bottom: 20px; 
+            color: var(--police-red); 
+            text-decoration: none; 
+            font-weight: bold; 
+            text-transform: uppercase;
+        }
+        
+        .back-link:hover { color: white; }
+
+        h2 { 
+            border-bottom: 2px solid var(--police-red); 
+            display: inline-block; 
+            padding-bottom: 10px; 
+            margin-bottom: 40px; 
+            text-transform: uppercase;
+        }
+
+        .rac-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            justify-items: center;
+        }
+
+        .rac-bubble {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 3px solid var(--police-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            padding: 25px;
+            box-sizing: border-box;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .rac-bubble::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--overlay);
+            z-index: 1;
+            transition: background 0.3s ease;
+        }
+
+        .rac-bubble span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .rac-bubble:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--police-red);
+        }
+
+        .rac-bubble:hover::before {
+            background: rgba(227, 6, 19, 0.4); 
+        }
+
+        /* --- IMAGES DE FOND --- */
+        .img-approche { background-image: url('images/approche.jpg'); }
+        .img-controle { background-image: url('images/controle.jpg'); }
+        .img-fouille  { background-image: url('images/fouille-sac.jpg'); }
+        .img-audition { background-image: url('images/audition.jpg'); }
+        .img-video    { background-image: url('images/videos-racolage.jpg'); }
+        .img-bilan    { background-image: url('images/bilan-unite.jpg'); }
+
+        @media (max-width: 850px) { .rac-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 550px) { 
+            .rac-grid { grid-template-columns: 1fr; }
+            .rac-bubble { width: 200px; height: 200px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="Racoleur.html" class="back-link">← Retour Procédures</a>
+        <br>
+        <h2>Détails Opérationnels : Racoleur</h2>
+
+        <div class="rac-grid">
+            <a href="pdf/fiche_approche_discrète.pdf" class="rac-bubble img-approche">
+                <span>1. Technique d'Approche</span>
+            </a>
+
+            <a href="pdf/guide_controle_identite.pdf" class="rac-bubble img-controle">
+                <span>2. Contrôle d'Identité</span>
+            </a>
+
+            <a href="pdf/procedure_fouille_bagages.pdf" class="rac-bubble img-fouille">
+                <span>3. Fouille des Bagages</span>
+            </a>
+
+            <a href="pdf/modele_audition_libre.pdf" class="rac-bubble img-audition">
+                <span>4. Audition Libre</span>
+            </a>
+
+            <a href="videos-racolage.html" class="rac-bubble img-video">
+                <span>5. Vidéos d'Intervention</span>
+            </a>
+
+            <a href="pdf/recap_infractions_frequentes.pdf" class="rac-bubble img-bilan">
+                <span>6. Infractions Fréquentes</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

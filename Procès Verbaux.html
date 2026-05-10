@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portail d'Apprentissage & Ressources</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0;
+            background-color: #f4f7f6;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+        .back-nav {
+            margin-bottom: 20px;
+        }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 600;
+            font-size: 10pt;
+            transition: all 0.3s ease;
+            background: #fff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .btn-back:hover {
+            color: #3498db;
+            transform: translateX(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .btn-back svg {
+            margin-right: 8px;
+        }
+        .header {
+            background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+            color: white;
+            padding: 40pt 20pt;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24pt;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .header p {
+            margin-top: 10pt;
+            font-size: 12pt;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        .container {
+            padding: 30pt;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .category-section {
+            margin-bottom: 30pt;
+            background: white;
+            border-radius: 8pt;
+            padding: 20pt;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-left: 5px solid #3498db;
+        }
+        .category-title {
+            color: #2c3e50;
+            font-size: 16pt;
+            margin-top: 0;
+            margin-bottom: 15pt;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5pt;
+            display: flex;
+            align-items: center;
+        }
+        .file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10pt;
+            border-bottom: 1px solid #f1f1f1;
+            transition: background 0.2s;
+        }
+        .file-item:last-child {
+            border-bottom: none;
+        }
+        .file-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .file-name {
+            font-weight: 600;
+            color: #34495e;
+            text-decoration: none;
+            font-size: 11pt;
+        }
+        .file-name:hover {
+            color: #3498db;
+        }
+        .file-meta {
+            font-size: 9pt;
+            color: #95a5a6;
+        }
+        .download-btn {
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            padding: 5pt 12pt;
+            border-radius: 4pt;
+            font-size: 9pt;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .footer {
+            text-align: center;
+            padding: 20pt;
+            font-size: 10pt;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Ressources Pédagogiques</h1>
+        <p>Bibliothèque de Procès Verbaux.</p>
+    </div>
+
+    <div class="container">
+        <div class="back-nav">
+            <a href="Procédures_types.html" class="btn-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                Retour à l'accueil
+            </a>
+        </div>
+        <!-- Catégorie 1 -->
+        <div class="category-section">
+            <h2 class="category-title">📚 I.P.M</h2>
+            <ul class="file-list">
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Interpelle</a>
+                    </div>
+                    <a href="Procédures\IPM\interpelle IPM.docx" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">Attestation + Mariane</a>
+                    </div>
+                    <a href="Procédures\IPM\attestation mission+marianne.pdf" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">Réquisition + Mariane</a>
+                    </div>
+                    <a href="Procédures\IPM\requiz+marianne.pdf" class="download-btn">Télécharger</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Catégorie 2 -->
+        <div class="category-section" style="border-left-color: #2ecc71;">
+            <h2 class="category-title">🛠️ Vérification Droit au Séjour</h2>
+            <ul class="file-list">
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Vérification du Droit au Séjour</a>
+                    </div>
+                    <a href="Procédures\PV\Vérif Drt au Séjour.txt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Vérification du Droit au Séjour Audition</a>
+                    </div>
+                    <a href="Procédures\PV\Vérif Drt au Séjour Audition.txt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">Notification de Placement</a>
+                    </div>
+                    <a href="Procédures\PV\Notification de placement.txt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">Etranger en Situation Irrégulière (E.S.I)</a>
+                    </div>
+                    <a href="Procédures\PV\E.S.I.txt" class="download-btn">Télécharger</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Catégorie 3 -->
+        <div class="category-section" style="border-left-color: #2ecc71;">
+            <h2 class="category-title">🛠️ Vol Aggravé</h2>
+            <ul class="file-list">
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Vol + Dégradation</a>
+                    </div>
+                    <a href="Procédures\PV\Vol + dégradations.odt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Vol Aggravé</a>
+                    </div>
+                    <a href="Procédures\PV\Vol Aggravé.pdf" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Vol Aggravé 2</a>
+                    </div>
+                    <a href="Procédures\PV\Vol Aggravé 2.txt" class="download-btn">Télécharger</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Catégorie 4 -->
+        <div class="category-section" style="border-left-color: #2ecc71;">
+            <h2 class="category-title">🎨 Autres P.V</h2>
+            <ul class="file-list">
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Agression Sexuelle</a>
+                    </div>
+                    <a href="Procédures\PV\Agression Sexuelle.odt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Dégradation</a>
+                    </div>
+                    <a href="Procédures\PV\Degradations.txt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V I.3P</a>
+                    </div>
+                    <a href="Procédures\PV\I.P.P.P.txt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Insulte Raciale</a>
+                    </div>
+                    <a href="Procédures\PV\Insulte Raciale.odt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Découverte Arme</a>
+                    </div>
+                    <a href="Procédures\PV\PV Découverte d'arme.odt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Mandat de recherche</a>
+                    </div>
+                    <a href="Procédures\PV\Mandat de recherche.txt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">P.V Menace de mort</a>
+                    </div>
+                    <a href="Procédures\PV\Menace de mort.txt" class="download-btn">Télécharger</a>
+                </li>
+                <li class="file-item">
+                    <div class="file-info">
+                        <a href="#" class="file-name">Rapport Morillons</a>
+                    </div>
+                    <a href="Procédures\PV\Rapport Morillons.odt" class="download-btn">Télécharger</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2026 Portail d'Apprentissage.
+    </div>
+</body>
+</html>

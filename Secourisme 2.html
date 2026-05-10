@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secourisme - Guide Interactif</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --rouge: #d32f2f;
+            --bleu: #1976d2;
+            --gris: #f5f5f5;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        header {
+            background: linear-gradient(135deg, var(--rouge), #b71c1c);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .nav-links a:hover { text-decoration: underline; }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/1920/1080') center/cover no-repeat;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-content {
+            max-width: 800px;
+            padding: 2rem;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--rouge);
+            color: white;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: #b71c1c;
+            transform: scale(1.05);
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            padding: 4rem 0;
+        }
+        h2 {
+            color: var(--rouge);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card i {
+            font-size: 3.5rem;
+            color: var(--rouge);
+            margin-bottom: 1rem;
+        }
+
+        .urgence {
+            background: #ffebee;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        .urgence h3 {
+            color: var(--rouge);
+            font-size: 2rem;
+        }
+
+        footer {
+            background: #212121;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        footer a {
+            color: #ff5252;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { gap: 1rem; font-size: 0.95rem; }
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-heartbeat"></i>
+                SecourGuide
+            </div>
+            <div class="nav-links">
+                <a href="#">Accueil</a>
+                <a href="#">Gestes d'urgence</a>
+                <a href="#">Situations</a>
+                <a href="#">Quiz</a>
+                <a href="#">À propos</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Guide Interactif de Secourisme</h1>
+            <p>Sauvez des vies en apprenant les gestes qui comptent.<br>Simple, clair et accessible à tous.</p>
+            <a href="#gestes" class="btn">Découvrir les gestes d'urgence</a>
+        </div>
+    </section>
+
+    <main>
+        <section id="gestes">
+            <h2>Gestes Essentiels en Urgence</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Arrêt Cardiaque</h3>
+                    <p>Reconnaître l'arrêt cardiaque et pratiquer la réanimation cardio-pulmonaire (RCP).</p>
+                    <a href="#" class="btn" style="margin-top:15px; padding:10px 25px; font-size:1rem;">Voir la procédure →</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-lungs"></i>
+                    <h3>Étouffement</h3>
+                    <p>Manoeuvre de Heimlich chez l'adulte, l'enfant et le nourrisson.</p>
+                    <a href="#" class="btn" style="margin-top:15px; padding:10px 25px; font-size:1rem;">Voir la procédure →</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-band-aid"></i>
+                    <h3>Hémorragie</h3>
+                    <p>Contrôler une hémorragie externe grave.</p>
+                    <a href="#" class="btn" style="margin-top:15px; padding:10px 25px; font-size:1rem;">Voir la procédure →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="urgence">
+            <h3>🚨 Numéro d'urgence en France</h3>
+            <p style="font-size:2rem; margin:1.5rem 0;">
+                <strong>15</strong> – SAMU<br>
+                <strong>18</strong> – Pompiers<br>
+                <strong>112</strong> – Numéro européen unique
+            </p>
+            <p>Appelez immédiatement en cas d'urgence vitale.</p>
+        </section>
+
+        <section>
+            <h2>Situations Courantes</h2>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Malaise / Coup de Chaleur</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-snowflake"></i>
+                    <h3>Hypothermie / Gelure</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Électrocution</h3>
+                </div>
+                <div class="card">
+                    <i class="fas fa-car-crash"></i>
+                    <h3>Accident de la route</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SecourGuide - Guide Interactif de Secourisme</p>
+        <p>Ce site est une version éducative. En cas d'urgence réelle, contactez immédiatement les services de secours.</p>
+        <p>
+            <a href="#">Mentions légales</a> •
+            <a href="#">Confidentialité</a> •
+            <a href="#">Nous contacter</a>
+        </p>
+    </footer>
+
+</body>
+</html>

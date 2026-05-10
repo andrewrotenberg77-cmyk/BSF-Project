@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Galerie Photos - BSF Orly</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        /* --- BARRE DE NAVIGATION (FIXE) --- */
+        nav { 
+            background: #000; 
+            padding: 15px; 
+            text-align: center; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid #333; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.9em; 
+        }
+        nav a.active { 
+            color: #3498db; 
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background: linear-gradient(135deg, #2980b9 0%, #2c3e50 100%);
+            color: white;
+            padding: 60pt 20pt 30pt 20pt; /* Espace pour le nav fixe */
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24pt;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .container {
+            padding: 30pt;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 1.4em;
+        }
+
+        /* --- GRILLE GALERIE --- */
+        .galerie-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .galerie-item { 
+            position: relative; 
+            overflow: hidden; 
+            border-radius: 8px; 
+            height: 280px; 
+            background-color: #000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .galerie-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: transform 0.5s ease, filter 0.5s ease; 
+        }
+
+        .galerie-item:hover img { 
+            transform: scale(1.1); 
+            filter: brightness(0.5); 
+        }
+
+        /* --- DESCRIPTION SURVOL --- */
+        .galerie-item .desc { 
+            position: absolute; 
+            bottom: 0; 
+            left: 0; 
+            width: 100%; 
+            padding: 20px; 
+            background: linear-gradient(transparent, rgba(0,0,0,0.9)); 
+            color: white; 
+            font-size: 0.9em; 
+            font-weight: 500;
+            transform: translateY(100%); 
+            transition: transform 0.3s ease-out; 
+            box-sizing: border-box;
+        }
+
+        .galerie-item:hover .desc { 
+            transform: translateY(0); 
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 15pt; }
+            .galerie-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="formation.html">Formation</a>
+        <a href="equipement.html">Équipement</a>
+        <a href="galerie.html" class="active">Galerie</a>
+        <a href="statistiques.html">Statistiques</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header">
+        <h1>Médiathèque</h1>
+        <p>BSF Orly - Immersion photographique et opérationnelle</p>
+    </div>
+
+    <div class="container">
+        <h2>Galerie Opérationnelle</h2>
+        
+        <div class="galerie-grid">
+            <div class="galerie-item">
+                <img src="Média\Galerie\TdC 2.jpeg" alt="Intervention">
+                <div class="desc">Tour de Contrôle</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\Air.jpg" alt="Patrouille">
+                <div class="desc">Survol</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\Ancien Orly Ouest.png" alt="Entrainement">
+                <div class="desc">Ancien Orly Ouest</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\Paris Orly.jpg" alt="Matériel">
+                <div class="desc">Paris Orly</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\Paris Orly nuit.webp" alt="Intervention">
+                <div class="desc">Orly by Night</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\Panneaux Départs.webp" alt="Patrouille">
+                <div class="desc">Panneaux D'affichages</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\avion-crepuscule.jpg" alt="Matériel">
+                <div class="desc">avion crepuscule</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\PH.webp" alt="Entrainement">
+                <div class="desc">Pavillon d'Honneur</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\NBC Tir.jpg" alt="Intervention">
+                <div class="desc">Entraînement de Tir en tenue N.R.B.C.e</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\NBC Tir 2.jpg" alt="Patrouille">
+                <div class="desc">Entraînement de Tir en tenue N.R.B.C.e (suite)</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\TDM 2 Prog 2.png" alt="Entrainement">
+                <div class="desc">Progression tactique - Mode TDM Niv 2</div>
+            </div>
+            <div class="galerie-item">
+                <img src="Média\Galerie\TDM 2 Prog.png" alt="Matériel">
+                <div class="desc">Progression TDM 2 - Zone sous-sol</div>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center; color: #7f8c8d; font-size: 9pt; padding: 40px 0 20px 0;">
+        &copy; 2026 BSF Orly - Portail d'Apprentissage.
+    </div>
+
+</body>
+</html>

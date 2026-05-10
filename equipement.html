@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Équipement Tactique - BSF Orly</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3436;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+        }
+
+        /* --- BARRE DE NAVIGATION (FIXE) --- */
+        nav { 
+            background: #000; 
+            padding: 15px; 
+            text-align: center; 
+            position: fixed; 
+            width: 100%; 
+            top: 0; 
+            z-index: 1000; 
+            border-bottom: 1px solid #333; 
+        }
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin: 0 15px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            font-size: 0.9em; 
+        }
+        nav a.active { 
+            color: #3498db; 
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* --- BANNIÈRE IMAGE (STYLE RÉCUPÉRÉ & ADAPTÉ) --- */
+        .header-section {
+            background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("Média/Equipement/Salle armement.png");
+            background-size: cover;
+            background-position: center 35%;
+            min-height: 340px; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: flex-end;
+            padding-bottom: 30px; 
+            padding: 20px; 
+            margin-top: 50px; /* Espace pour le nav fixe */
+            text-align: center;
+            color: white;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
+        }
+
+        .header-section h1 {
+            margin: 0; 
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            font-size: 2.5em; 
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- GRILLE D'ÉQUIPEMENT --- */
+        .item-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .item-card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 8px; 
+            border-top: 4px solid #2980b9; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .item-card h3 { 
+            color: #2c3e50; 
+            margin-top: 0; 
+            font-size: 1.3em; 
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .item-card ul { 
+            padding-left: 20px; 
+            color: #555; 
+            font-size: 0.95em; 
+            list-style-type: none;
+        }
+
+        .item-card ul li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .item-card ul li::before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        @media (max-width: 768px) {
+            .header-section { min-height: 200px; }
+            .header-section h1 { font-size: 1.6em; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="presentation.html">Présentation</a>
+        <a href="formation.html">Formation</a>
+        <a href="equipement.html" class="active">Équipement</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="statistiques.html">Statistiques</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="header-section">
+        <h1>Moyens Techniques & Armement</h1>
+    </div>
+
+    <div class="container">
+        <p class="intro-text">L'unité dispose de matériels de pointe adaptés aux spécificités de l'intervention en milieu aéroportuaire et aux contraintes du contre-terrorisme.</p>
+
+        <div class="item-grid">
+            <div class="item-card">
+                <h3>🔫 Armement</h3>
+                <ul>
+                    <li>Pistolets semi-automatiques 9mm.</li>
+                    <li>Pistolets Impulsion Électrique (Tazer 7).</li>
+                    <li>Fusils d'assaut (HK G36C).</li>
+                    <li>Pistolets mitrailleurs (HK UMP 9).</li>
+                </ul>
+            </div>
+
+            <div class="item-card">
+                <h3>🛡️ Protection Balistique</h3>
+                <ul>
+                    <li>Porte-plaques lourds Classe IV.</li>
+                    <li>Casques balistiques avec visières pare-balles.</li>
+                    <li>Boucliers tactiques à haute résistance.</li>
+                </ul>
+            </div>
+
+            <div class="item-card">
+                <h3>📡 Communication</h3>
+                <ul>
+                    <li>Poste Acropol.</li>
+                    <li>CrossCall Néo.</li>
+                    <li>CrossCall X-Comm.</li>
+                </ul>
+            </div>
+
+            <div class="item-card">
+                <h3>☣️ Protection N.R.B.C.e</h3>
+                <ul>
+                    <li>Polycombi Type 3.</li>
+                    <li>Masque OC50.</li>
+                    <li>Cartouche Filtrante.</li>
+                    <li>Gants Filtrants Target.</li>
+                </ul>
+            </div>
+
+            <div class="item-card">
+                <h3>🚔 Véhicules</h3>
+                <ul>
+                    <li>Peugeot Expert Banalisé.</li>
+                    <li>Peugeot Expert Sérigraphié.</li>
+                    <li>Peugeot 5008 Sérigraphié.</li>
+                    <li>Peugeot Rifter Sérigraphié.</li>
+                </ul>
+            </div> 
+        </div>
+    </div>
+
+    <div style="text-align: center; color: #7f8c8d; font-size: 9pt; padding: 40px 0 20px 0;">
+        &copy; 2026 BSF Orly - Portail d'Apprentissage.
+    </div>
+
+</body>
+</html>
